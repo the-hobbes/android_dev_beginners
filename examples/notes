@@ -1,0 +1,18 @@
+linear vs relative layout
+
+linear layout:
+- good for aligning things into rows or columns
+- can divide a space with layout weights
+- orientation and layout weight
+
+relative layouts:
+- good for positioning elements relative to one another
+- for example, to put b below a, or c in the lower left hand corner of the screen
+- can also overlap views
+- positioning views relative to sibling and parent (toLeft, alignParent, etc...)
+
+Steps to drawing an app:
+1) choose views
+2) position views (linear or relative layout?)
+3) style the views (color, font, etc...)
+
