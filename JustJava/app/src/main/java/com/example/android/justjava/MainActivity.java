@@ -1,11 +1,15 @@
 package com.example.android.justjava;
 
-import android.support.v7.app.ActionBarActivity;
+import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.support.v7.app.ActionBarActivity;
+import android.view.View;
+import android.widget.TextView;
 
-
+/**
+ * This app displays an order form to order coffee.
+ */
+@SuppressWarnings("deprecation")  // don't tell me about ActionBarActivity, I know already
 public class MainActivity extends ActionBarActivity {
 
     @Override
@@ -14,25 +18,20 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
+    /**
+     * This method is called when the order button is clicked.
+     */
+    public void submitOrder(View view) {
+        display(1);
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
+    /**
+     * This method displays the current quantity value on the screen, plus the given increase.
+     */
+    private void display(int number) {
+        TextView quantityTextView = (TextView) findViewById(R.id.value_text_view);
+        int  currentValue = Integer.parseInt(quantityTextView.getText().toString());
+        currentValue= currentValue + number;
+        quantityTextView.setText("" + currentValue);
     }
 }
