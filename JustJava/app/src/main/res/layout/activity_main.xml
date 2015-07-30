@@ -15,33 +15,41 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
-    <Button
-        android:id="@+id/increment_button"
-        android:text="+"
-        android:width="48dp"
-        android:height="48dp"
+    <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="increment" />
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/value_text_view"
-        android:padding="10dp"
-        android:textSize="16sp"
-        android:textColor="#000000"
-        android:text="2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp" />
+        <Button
+            android:id="@+id/decrement_button"
+            android:text="-"
+            android:width="48dp"
+            android:height="48dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="decrement" />
 
-    <Button
-        android:id="@+id/decrement_button"
-        android:text="-"
-        android:width="48dp"
-        android:height="48dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="decrement" />
+        <TextView
+            android:id="@+id/value_text_view"
+            android:padding="10dp"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:text="2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/decrement_button"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/increment_button"
+            android:text="+"
+            android:width="48dp"
+            android:height="48dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/value_text_view"
+            android:onClick="increment" />
+
+    </RelativeLayout>
 
     <TextView
         android:id="@+id/price_display_text_view"
