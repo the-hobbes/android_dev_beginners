@@ -15,7 +15,7 @@ import java.text.NumberFormat;  // give us access to currency formatting
 public class MainActivity extends ActionBarActivity {
 
     // instance variables for all methods to consume
-    int quantity = 2;
+    int quantity = 1;
     int price = 5;
 
     @Override

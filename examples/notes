@@ -16,3 +16,6 @@ Steps to drawing an app:
 2) position views (linear or relative layout?)
 3) style the views (color, font, etc...)
 
+Layout guideline:
+http://developer.android.com/guide/topics/ui/declaring-layout.html
+

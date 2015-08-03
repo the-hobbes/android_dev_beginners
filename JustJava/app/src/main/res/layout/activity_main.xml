@@ -33,7 +33,7 @@
             android:padding="10dp"
             android:textSize="16sp"
             android:textColor="#000000"
-            android:text="2"
+            android:text="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@id/decrement_button"
@@ -65,7 +65,7 @@
         android:padding="10dp"
         android:textSize="16sp"
         android:textColor="#000000"
-        android:text="$10"
+        android:text="$0"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp" />
