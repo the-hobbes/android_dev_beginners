@@ -1,0 +1,45 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Player 1"
+        android:gravity="center_horizontal"
+        android:padding="4dp"/>
+
+    <TextView
+        android:id="@+id/player_1_total"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="20"
+        android:gravity="center_horizontal"
+        android:padding="4dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="+1 Point"
+        android:layout_margin="8dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="-1 Point"
+        android:layout_margin="8dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="-5 Points"
+        android:layout_margin="8dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        android:layout_margin="8dp"/>
+
+</LinearLayout>
