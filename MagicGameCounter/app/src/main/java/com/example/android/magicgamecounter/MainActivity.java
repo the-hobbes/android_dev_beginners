@@ -72,15 +72,15 @@ public class MainActivity extends ActionBarActivity {
             case R.id.incrementButtonPlayer1ByOne:
                 incrementLifeTotal(PLAYER1, ONE);
                 break;
-//            case R.id.decrementButtonPlayer2ByFive:
-//                decrementLifeTotal(PLAYER2, FIVE);
-//                break;
-//            case R.id.decrementButtonPlayer2ByOne:
-//                decrementLifeTotal(PLAYER2, ONE);
-//                break;
-//            case R.id.incrementButtonPlayer2ByOne:
-//                incrementLifeTotal(PLAYER2, ONE);
-//                break;
+            case R.id.decrementButtonPlayer2ByFive:
+                decrementLifeTotal(PLAYER2, FIVE);
+                break;
+            case R.id.decrementButtonPlayer2ByOne:
+                decrementLifeTotal(PLAYER2, ONE);
+                break;
+            case R.id.incrementButtonPlayer2ByOne:
+                incrementLifeTotal(PLAYER2, ONE);
+                break;
         }
     }
 
@@ -94,7 +94,7 @@ public class MainActivity extends ActionBarActivity {
         player_1_total = 20;
         player_2_total = 20;
         displayForPlayer(PLAYER1, player_1_total);
-//        displayForPlayer(PLAYER2, player_2_total);
+        displayForPlayer(PLAYER2, player_2_total);
     }
 
     /**
