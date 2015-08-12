@@ -19,27 +19,35 @@
         android:padding="4dp"/>
 
     <Button
+        android:id="@+id/incrementButtonPlayer1ByOne"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="+1 Point"
-        android:layout_margin="8dp"/>
+        android:layout_margin="8dp"
+        android:onClick="lifeChangeHandler"/>
 
     <Button
+        android:id="@+id/decrementButtonPlayer1ByOne"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="-1 Point"
-        android:layout_margin="8dp"/>
+        android:layout_margin="8dp"
+        android:onClick="lifeChangeHandler"/>
 
     <Button
+        android:id="@+id/decrementButtonPlayer1ByFive"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="-5 Points"
-        android:layout_margin="8dp"/>
+        android:layout_margin="8dp"
+        android:onClick="lifeChangeHandler"/>
 
     <Button
+        android:id="@+id/player_1_total"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Reset"
-        android:layout_margin="8dp"/>
+        android:layout_margin="8dp"
+        android:onClick="resetHandler"/>
 
 </LinearLayout>

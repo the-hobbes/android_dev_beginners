@@ -12,8 +12,8 @@ public class MainActivity extends ActionBarActivity {
     // Constants
     public static final int FIVE = 5;
     public static final int ONE = 1;
-    public static final String PLAYER1 = "player1";
-    public static final String PLAYER2 = "player2";
+    public static final String PLAYER1 = "player_1_total";
+    public static final String PLAYER2 = "player_2_total";
 
     // Instance variables
     int player_1_total = 20;
@@ -31,13 +31,12 @@ public class MainActivity extends ActionBarActivity {
     }
 
     /**
-     *
+     * Inflate the menu; this adds items to the action bar if it is present.
      * @param menu
      * @return
      */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
@@ -62,29 +61,40 @@ public class MainActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    // TODO: fill in these handlers, and hook them into the xml.
-    public void decrementHandlerPlayer1ByFive(View view) {
-
+    public void lifeChangeHandler(View view) {
+        switch (view.getId()) {
+            case R.id.decrementButtonPlayer1ByFive:
+                decrementLifeTotal(PLAYER1, FIVE);
+                break;
+            case R.id.decrementButtonPlayer1ByOne:
+                decrementLifeTotal(PLAYER1, ONE);
+                break;
+            case R.id.incrementButtonPlayer1ByOne:
+                incrementLifeTotal(PLAYER1, ONE);
+                break;
+//            case R.id.decrementButtonPlayer2ByFive:
+//                decrementLifeTotal(PLAYER2, FIVE);
+//                break;
+//            case R.id.decrementButtonPlayer2ByOne:
+//                decrementLifeTotal(PLAYER2, ONE);
+//                break;
+//            case R.id.incrementButtonPlayer2ByOne:
+//                incrementLifeTotal(PLAYER2, ONE);
+//                break;
+        }
     }
 
-    public void decrementHandlerPlayer1ByOne(View view) {
 
-    }
 
-    public void incrementHandlerPlayer1ByOne(View view) {
-
-    }
-
-    public void decrementHandlerPlayer2ByFive(View view) {
-
-    }
-
-    public void decrementHandlerPlayer2ByOne(View view) {
-
-    }
-
-    public void incrementHandlerPlayer2ByOne(View view) {
-
+    /**
+     * Reset the life totals of all players and update the view.
+     * @param view
+     */
+    public void resetHandler(View view) {
+        player_1_total = 20;
+        player_2_total = 20;
+        displayForPlayer(PLAYER1, player_1_total);
+//        displayForPlayer(PLAYER2, player_2_total);
     }
 
     /**
@@ -104,7 +114,6 @@ public class MainActivity extends ActionBarActivity {
 
         }
     }
-
 
     /**
      * Decreases the life total of a given player by a given amount.
@@ -126,6 +135,8 @@ public class MainActivity extends ActionBarActivity {
 
     /**
      * Displays the given score for a given player.
+     * @param player
+     * @param score
      */
     private void displayForPlayer(String player, int score) {
         // get id for given player
